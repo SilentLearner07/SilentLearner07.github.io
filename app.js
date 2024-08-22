@@ -3,16 +3,14 @@ let ul = document.querySelector("ul");
 let bar = document.querySelector("#bar");
 let cross = document.querySelector("#cross");
 
-bar.addEventListener("click", () => {
-  nav.style.overflow = "visible";
-  bar.style.display = "none";
-  cross.style.display = "block";
-  ul.style.maxHeight = "300px";
-});
-
-cross.addEventListener("click", () => {
-  nav.style.overflow = "hidden";
-  cross.style.display = "none";
-  bar.style.display = "block";
-  ul.style.maxHeight = "0px";
-});
+function navdown() {
+  if (ul.classList.contains("open")) {
+    ul.classList.remove("open");
+    bar.style.display = "block";
+    cross.style.display = "none";
+  } else {
+    ul.classList.add("open");
+    bar.style.display = "none";
+    cross.style.display = "block";
+  }
+}

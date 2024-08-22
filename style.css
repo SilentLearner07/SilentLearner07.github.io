@@ -39,20 +39,25 @@ ul {
   nav {
     position: relative;
     padding: 0 50px;
-    overflow: hidden;
   }
   ul {
     padding: 0 50px;
     max-height: 0;
     position: absolute;
     flex-direction: column;
+    gap: 10px;
     top: 50px;
     left: 0;
-    transition: all 1s ease-in;
     right: 0;
     overflow: hidden;
     background: linear-gradient(to right, orange, rgb(7, 155, 253));
+    transition: max-height 0.5s ease-in-out;
   }
+
+  ul.open {
+    max-height: 300px;
+  }
+
   .container {
     padding: 0;
   }
