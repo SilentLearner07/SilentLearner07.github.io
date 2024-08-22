@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  background-color: antiquewhite;
+  background-color: #232946;
+  font-family: sans-serif;
 }
 .container {
   padding: 0 50px;
-  background: linear-gradient(to right, orange, rgb(7, 155, 253));
+  background-color: #232946;
 }
 nav {
   display: flex;
@@ -20,6 +21,7 @@ ul {
   display: flex;
   list-style: none;
   gap: 10px;
+  color: #fffffe;
 }
 .menu {
   border: 2px solid;
@@ -34,11 +36,31 @@ ul {
 .navdown {
   display: none;
 }
-
+main {
+  margin: 30px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100px;
+  width: 100%;
+}
+main img {
+  height: 200px;
+  width: 100%;
+  border: 2px solid #121629;
+  border-radius: 5%;
+}
+main h1 {
+  color: #fffffe;
+}
+main p {
+  color: #b8c1ec;
+  line-height: 1.6;
+  padding-right: 10px;
+  text-align: justify;
+}
 @media (max-width: 600px) {
   nav {
     position: relative;
-    padding: 0 50px;
   }
   ul {
     padding: 0 50px;
@@ -50,16 +72,12 @@ ul {
     left: 0;
     right: 0;
     overflow: hidden;
-    background: linear-gradient(to right, orange, rgb(7, 155, 253));
+    background-color: #232946;
     transition: max-height 0.5s ease-in-out;
   }
 
   ul.open {
     max-height: 300px;
-  }
-
-  .container {
-    padding: 0;
   }
   .navdown {
     display: block;
